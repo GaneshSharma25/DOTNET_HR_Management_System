@@ -6,12 +6,26 @@ using static Emp.Employee;
 Console.WriteLine("Welcome to Employee Management System");
 List<Employee> empList = new List<Employee>();
 bool flag = false;
-
-string filePath = "C:\\Users\\ganes\\Desktop\\dotnet.txt";
+Console.WriteLine("Enter File Location: ");
+string filePath = Console.ReadLine();
+Console.WriteLine(filePath);
 string jsonString = File.ReadAllText(filePath);
-if(File.Exists(filePath) && jsonString.Length != 0){
-    empList = JsonSerializer.Deserialize<List<Employee>>(jsonString)!;
+if (File.Exists(filePath))
+{
+    if (jsonString.Length != 0)
+    {
+        empList = JsonSerializer.Deserialize<List<Employee>>(jsonString)!;
+    }
+    else
+    {
+        Console.WriteLine("Empty File..");
+    }
 }
+else
+{
+    Console.WriteLine("Invalid FilePath");
+}
+
 
 
 while (!flag){
@@ -135,7 +149,7 @@ while (!flag){
             {
                 Console.WriteLine("Employee not found..");
             }
-            
+
             break;
     case 0:
             jsonString = JsonSerializer.Serialize(empList);
