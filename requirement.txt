@@ -1,0 +1,29 @@
+//building hr management system 
+
+
+//menu driven appln
+
+//1.show all emp details
+
+//2.enter emp id
+
+//3. add remove from list 
+
+//
+
+//4. process salary --object count //money spent to be displayed
+
+//5.
+//-----------------------------------------------
+//salesEmployee class
+//salesManager class
+
+//--------------------------------
+//employee.cs
+//hrManager.cs
+
+//hrLib library
+//Taxation.dll --> taxManager class --- tax operation delegate ---tax fn will take sal as parameter..
+
+//console app name CompanyApp
+//menu driven appln
